@@ -1,0 +1,137 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #00c6ff;
+}
+
+section {
+    padding: 4rem 1rem;
+    margin: 1rem 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+#welcome-section {
+    padding-top: 6rem; /* To avoid overlap with fixed navbar */
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+#projects {
+    text-align: center;
+    background-color: #e9ecef;
+}
+
+.project-tile {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 600px;
+    border-radius: 5px;
+    background-color: #fff3cd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-tile h3 {
+    margin: 0;
+}
+
+.project-tile p {
+    margin: 0.5rem 0 0;
+}
+
+.project-tile a {
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.project-tile a:hover {
+    color: #0056b3;
+}
+
+.contacts-section {
+    background-color: #f1f3f5;
+}
+
+.contacts-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacts-section li {
+    margin: 0.5rem 0;
+}
+
+.contacts-section a {
+    text-decoration: none;
+    color: #333;
+}
+
+.contacts-section a:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.container > div {
+    flex: 1 1 300px;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
