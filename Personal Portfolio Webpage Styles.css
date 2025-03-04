@@ -127,10 +127,6 @@ h1, h2, h3 {
 
 /* Media queries */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
     .container {
         flex-direction: column;
     }
