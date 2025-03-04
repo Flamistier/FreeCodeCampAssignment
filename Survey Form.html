@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en>
+	<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Survey Form Styles.css">
+    <title>HOK Survey Form</title>
+	</head>
+	<body>
+    <h1 id="title">HOK Survey Form</h1>
+    <p id="description">Please fill out this form with the required information for survery used.</p>
+	<form id="survey-form">
+	    <fieldset>
+	        <label id="name-label" for="name">Name ID: 
+            <input id="name" type="text" name="name" required placeholder="Please key in your login ID" />
+          </label>
+          <label id="email-label" for="email">Login Email: 
+            <input id="email" type="email" name="email" required placeholder="Please key in your login email" />
+          </label>
+          <label id="number-label" for="number">Duration (months): 
+            <input id="number" type="number" min="0" max="20" name="number" placeholder="How long you have been play for the games"/>
+          </label>
+          <label for="age">What is your age?
+            <select id="dropdown" name="age">
+              <option value="">(select one)</option>
+              <option value="1"> 12 years old < </option>
+              <option value="2"> 12 years old ~ 18 years old</option>
+              <option value="3"> 19 years old ~ 30 years old</option>
+              <option value="4"> > 30 years old </option>
+            </select>
+        </label>
+        <legend>Would you recommended this game to anyone?</legend>
+        <label for="yes">
+          <input id="yes" type="radio" value="1" class="inline" name="recommendation" checked /> Yes
+        </label>
+        <label for="no">
+          <input id="no" type="radio" value="2" class="inline" name="recommendation" /> No
+        </label>
+        <label for="maybe">
+          <input id="maybe" type="radio" value="3" class="inline" name="recommendation" /> Maybe
+        </label>
+        <legend>What factors influence your decision to play the game</legend>
+        <label for="game-gerne">
+          <input id="graphic" type="checkbox" class="inline" value="1" name="game-gerne" /> Graphic
+        </label>
+        <label for="game-gerne">
+          <input id="friendship" type="checkbox" class="inline" value="2" name="game-gerne" /> Friendship 
+        </label>
+        <label for="game-gerne">
+          <input id="style" type="checkbox" class="inline" value="3" name="game-gerne" /> Battle Royale Style
+        </label>
+        <label for="game-gerne">
+          <input id="other" type="checkbox" class="inline" value="4" name="game-gerne" /> Others
+        </label>
+        <label for="comment">Comment for the game:
+          <textarea id ="Comment" rows="3" cols="30" placeholder="Any improvement or complaint please write here" name="comment"></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit">
+    </form>
+	</body>
+</html>

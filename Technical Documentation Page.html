@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Technical Documentation Page Styles.css">
+    <title>OOP Documentation</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>OOP Documentation</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Introduction">Introduction</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Class_and_Object">Class and Object</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Abstraction">Abstraction</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Encapsulation">Encapsulation</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Inheritance">Inheritance</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Polymorphism">Polymorphism</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Why_do_we_need_OOP">Why do we need OOP</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>Object-oriented programming (OOP) is a fundamental programming paradigm used by nearly every
+                    developer at some point in their career.</p>
+                <p>It is a computer programming model that organizes software design around data, or objects, rather
+                    than functions and logic.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Class_and_Object">
+            <header>Class and Object</header>
+            <article>
+                <p>
+                    Classes and objects are the two main aspects of object-oriented programming.
+                </p>
+                <p>
+                    A class is a template for objects, and an object is an instance of a class. Class have attributes
+                    and functions. Somtimes we called it as properties and methods respectively.
+                </p>
+                <p>
+                    For example, car is a class. Toyota Vios is an object. Perodua Myvi can be an object too. Color is
+                    the attributes of the class. Speed Up is the functions of the car. Below code is the example:
+                </p>
+                <pre>
+                    <code>
+                    class Car
+                    {
+                        string color; // attributes
+                        int maxSpeed; // attributes
+                    
+                        public void fullThrottle() // functions
+                        {
+                            Console.WriteLine("The car is going as fast as it can!");
+                        }
+                    
+                        static void Main(string[] args)
+                        {
+                            Car myMyvi = new Car();
+                            myMyvi.color = "red";
+                            myMyvi.maxSpeed = 200;
+                            myMyvi.fullThrottle(); // Call the method
+                        }
+                    }
+                    </code>
+                </pre>
+            </article>
+        </section>
+        <section class="main-section" id="Abstraction">
+            <header>Abstraction</header>
+            <article>
+                <p>
+                    Abstraction is a fundamental concept in object-oriented programming that helps to hide the complex
+                    implementation details and show only the necessary features of an object.
+                </p>
+                <p>
+                    In C#, you can achieve abstraction using abstract classes and interfaces.
+                </p>
+                <pre>
+                    <code>
+                    // Abstract class
+                    public abstract class Shape
+                    {
+                        public abstract double CalculateArea();
+                    }
+                                        
+                    // Derived class
+                    public class Rectangle : Shape
+                    {
+                        public double Width { get; set; }
+                        public double Height { get; set; }
+                        public override double CalculateArea() => Width * Height;
+                    }
+                    
+                    class Program
+                    {
+                        static void Main()
+                        {
+                            Shape rectangle = new Rectangle { Width = 5, Height = 10 };
+                            Console.WriteLine($"Area of rectangle: {rectangle.CalculateArea()}");
+                        }
+                    }
+                    </code>
+                </pre>
+            </article>
+        </section>
+        <section class="main-section" id="Encapsulation">
+            <header>Encapsulation</header>
+            <article>
+                <p>
+                    Encapsulation is another core principle of object-oriented programming. It involves bundling the
+                    data (fields) and methods (functions) that operate on the data into a single unit (class) and
+                    restricting access to some of the object's components.
+                </p>
+                <p>
+                    This helps to protect the integrity of the data and encapsulate the internal workings of the class.
+                </p>
+                <pre>
+                    <code>
+                    public class Person
+                    {
+                        private string name;
+                        private int age;
+                    
+                        public string Name { get; set; }
+                        public int Age
+                        {
+                            get => age;
+                            set => age = (value >= 0) ? value : throw new ArgumentException("Age cannot be negative.");
+                        }
+                    
+                        public void Display() => Console.WriteLine($"Name: {Name}, Age: {Age}");
+                    }
+                    
+                    class Program
+                    {
+                        static void Main()
+                        {
+                            var person = new Person { Name = "John Doe", Age = 30 };
+                            person.Display();
+                        }
+                    }
+                    </code>
+                </pre>
+            </article>
+        </section>
+        <section class="main-section" id="Inheritance">
+            <header>Inheritance</header>
+            <article>
+                <p>
+                    Inheritance allows a class to inherit members (fields, methods, properties) from another class.
+                </p>
+                <p>
+                    This helps to create a hierarchical relationship between classes and promotes code reuse.
+                </p>
+                <pre>
+                    <code>
+                    // Base class
+                    public class Animal
+                    {
+                        public void Eat() => Console.WriteLine("Animal is eating.");
+                    }
+                                        
+                    // Derived class
+                    public class Dog : Animal
+                    {
+                        public void Bark() => Console.WriteLine("Dog is barking.");
+                    }
+                    
+                    class Program
+                    {
+                        static void Main()
+                        {
+                            // Create an instance of Dog
+                            Dog dog = new Dog();
+                                        
+                            // Call inherited method
+                            dog.Eat();
+                                        
+                            // Call method specific to Dog
+                            dog.Bark();
+                        }
+                    }
+                    </code>
+                </pre>
+            </article>
+        </section>
+        <section class="main-section" id="Polymorphism">
+            <header>Polymorphism</header>
+            <article>
+                <p>
+                    Polymorphism allows objects of different classes to be treated as objects of a common base class.
+                </p>
+                <p>
+                    It is a fundamental concept in object-oriented programming that enables methods to be used in
+                    different ways depending on the object calling them.
+                </p>
+                <p>
+                    There are two main types of polymorphism in C#:
+                </p>
+                <ul>
+                    <li>Compile-time polymorphism (method overloading)</li>
+                    <li>Runtime polymorphism (method overriding)</li>
+                </ul>
+                <pre>
+                    <code>
+                    public class Printer
+                    {
+                        // Method to print integer
+                        public void Print(int number) => Console.WriteLine($"Printing integer: {number}");
+                    
+                        // Method to print string
+                        public void Print(string text) => Console.WriteLine($"Printing string: {text}");
+                    }
+                    
+                    class Program
+                    {
+                        static void Main()
+                        {
+                            var printer = new Printer();
+                    
+                            // Call overloaded methods
+                            printer.Print(123);
+                            printer.Print("Hello, World!");
+                        }
+                    }
+                    </code>
+                </pre>
+                <pre>
+                    <code>
+                    // Base class
+                    public class Animal
+                    {
+                        public virtual void Speak() => Console.WriteLine("Animal makes a sound.");
+                    }
+                    
+                    // Derived class
+                    public class Dog : Animal
+                    {
+                        public override void Speak() => Console.WriteLine("Dog barks.");
+                    }
+                                        
+                    class Program
+                    {
+                        static void Main()
+                        {
+                            // Create objects of derived classes
+                            Animal myDog = new Dog();
+                                        
+                            // Call the overridden methods
+                            myDog.Speak(); // Outputs: Dog barks.
+                        }
+                    }
+                    </code>
+                </pre>
+            </article>
+        </section>
+        <section class="main-section" id="Why_do_we_need_OOP">
+            <header>Why do we need OOP</header>
+            <article>
+                <p></p>
+                <ul>
+                    <li>To make the development and maintenance of projects more effortless.</li>
+                    <li>To provide the feature of data hiding that is good for security concerns.</li>
+                    <li>We can solve real-world problems if we are using object-oriented programming.</li>
+                    <li>It ensures code reusability.</li>
+                    <li>It lets us write generic code: which will work with a range of data, so we don't have to write
+                        basic stuff over and over again.</li>
+                </ul>
+                <p>For more details can refer to <a
+                        href="https://en.wikipedia.org/wiki/Object-oriented_programming">WIKI</a></p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+/* Reset and Global Styles */
+*, html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+#header-img {
+    height: 50px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    display: inline;
+}
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: #0071e3;
+}
+
+/* Hero Section */
+#Introducing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    text-align: center;
+    background-color: #f5f5f7;
+    padding: 20px;
+}
+#Introducing h2 {
+    max-width: 600px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+#Introducing img {
+    width: 300px;
+    border-radius: 8px;
+}
+
+/* Video Section */
+#AppleOneIn2024 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #ffffff;
+}
+#video {
+    width: 80%;
+    max-width: 800px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Pricing Section */
+#Pricing {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px;
+    background-color: #f5f5f7;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.product {
+    flex: 1 1 300px;
+    max-width: 300px;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 768px) {
+    #Pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+.level {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+.product h3 {
+    color: #0071e3;
+    margin-bottom: 10px;
+}
+.list {
+    list-style: none;
+    padding: 0;
+}
+.list li {
+    padding: 5px 0;
+}
+
+/* Subscription Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: white;
+}
+input[type="email"] {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+input[type="email"]:focus {
+    border-color: #0071e3;
+    outline: none;
+}
+input[type="submit"] {
+    background-color: #0071e3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f7;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+    }
+    #header-img {
+        margin-bottom: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #Introducing h2 {
+        font-size: 1.4rem;
+    }
+    #video {
+        height: 200px;
+    }
+    .product {
+        width: 90%;
+    }
+}

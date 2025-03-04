@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Build a Product Landing Page Styles.css">
+    <title>Apple One Subscription</title>
+</head>
+<body>
+    <header id="header">
+        <img id="header-img" src="logo.png" alt="Apple One Logo">
+        <nav id="nav-bar">
+            <ul>
+                <li>
+                    <a class="nav-link" href="#Introducing">Introducing</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#AppleOneIn2024">Apple One in 2024</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Pricing">Pricing</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="Introducing">
+            <h2>Apple One bundles up to six Apple subscriptions for one lower monthly price.</h2>
+            <img src="apple-one.jpg" alt="Apple One Overview">
+        </section>
+        <section id="AppleOneIn2024">
+            <iframe id="video" src="https://www.youtube.com/embed/j8m-ZZ1Avtk" frameborder="0" allowfullscreen></iframe>
+        </section>
+        <section id="Pricing">
+            <div class="pricing-container">
+                <div class="product" id="Individual">
+                    <h3>Individual</h3>
+                    <p class="price">$19.95/month</p>
+                    <ul>
+                        <li>iCloud+ 50GB</li>
+                        <li>TV+</li>
+                        <li>Music</li>
+                        <li>Arcade</li>
+                    </ul>
+                </div>
+                <div class="product" id="Family">
+                    <h3>Family</h3>
+                    <p class="price">$25.95/month</p>
+                    <ul>
+                        <li>iCloud+ 200GB</li>
+                        <li>TV+</li>
+                        <li>Music</li>
+                        <li>Arcade</li>
+                    </ul>
+                </div>
+                <div class="product" id="Premium">
+                    <h3>Premium</h3>
+                    <p class="price">$29.95/month</p>
+                    <ul>
+                        <li>iCloud+ 2TB</li>
+                        <li>TV+</li>
+                        <li>Music</li>
+                        <li>Arcade</li>
+                        <li>Fitness+</li>
+                        <li>News+</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="subscription-form">
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input type="email" name="email" id="email" placeholder="Enter your Apple ID for subscription" required>
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Apple Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
