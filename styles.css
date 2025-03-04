@@ -12,15 +12,37 @@ header {
     padding: 20px;
 }
 
-#projects {
+#about {
     margin: 20px auto;
     max-width: 600px;
+    color: blueviolet;
+    text-align: center;
+    font-weight: bold;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#html-css-projects {
+    background-color: #ffeb3b; /* Yellow background */
+    color: #333; /* Dark text color */
+}
+
+#js-projects {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text color */
 }
 
 .project {
-    background: white;
+    background: #f9f9f9;
     padding: 15px;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
